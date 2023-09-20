@@ -1,0 +1,2 @@
+[ ] implement refresh token
+[ ] check jwt login auth on api hit

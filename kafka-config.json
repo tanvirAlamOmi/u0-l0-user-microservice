@@ -1,0 +1,6 @@
+{
+    "groupId": "user_group",
+    "kafkaTopic": "e_commerce_gateway_topic",
+    "broker": "localhost:9092",
+    "clientId": "user_service"
+}

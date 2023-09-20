@@ -1,0 +1,10 @@
+  async login(loginDto: LoginDto): Promise<{}> {
+        const user = await this.validateUser(loginDto);
+        const tokens =  await this.getTokens(user);
+        await this.userService.updateRefreshToken(user, tokens);
+        return tokens;
+    }
+
+    dont u think the token its returning is not the updated token.
+
+    -------------------------------------------------------------------------------------
