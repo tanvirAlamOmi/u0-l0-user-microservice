@@ -15,7 +15,7 @@ export class UsersController {
     constructor( private readonly userService: UsersService ) {}
 
     @Public()
-    @MessagePattern('findAllUsers')
+    @MessagePattern('getUsers')
     @UseGuards(RolesGuard)
     // @Roles(RolesEnum.ADMIN, RolesEnum.USER)
     async get(): Promise<User[]> {
@@ -23,7 +23,7 @@ export class UsersController {
     } 
 
     @Public()
-    @MessagePattern('findSingleUser')
+    @MessagePattern('getUser')
     // @UseGuards(RolesGuard, PermissionsGuard)
     // @Roles(RolesEnum.ADMIN, RolesEnum.USER)
     // @Permissions(PermissionsEnum.MASTER_USER)
