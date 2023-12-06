@@ -19,6 +19,7 @@ export class SignupDto {
     @IsString()
     role: string;
 
+    @IsOptional()
     @IsArray()
     @IsString({ each: true })
     permissions: string[];
